@@ -9,7 +9,7 @@ ENV LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 RUN wget http://download.osgeo.org/gdal/${GDAL_VERSION}/gdal-${GDAL_VERSION}.tar.gz \
   && tar -xf gdal-${GDAL_VERSION}.tar.gz \
   && wget http://download.osgeo.org/geos/geos-${GEOS_VERSION}.tar.bz2 \
-  && tar -xf geos-${GEOS_VERSION}.tar.gz \
+  && tar -xf geos-${GEOS_VERSION}.tar.bz2 \
 ## Install dependencies of gdal-$GDAL_VERSION
 ## && echo "deb-src http://deb.debian.org/debian jessie main" >> /etc/apt/sources.list \
   && apt-get update \
@@ -84,7 +84,7 @@ RUN wget http://download.osgeo.org/gdal/${GDAL_VERSION}/gdal-${GDAL_VERSION}.tar
     rgdal \
     rgeos \
     rlas \
-#    sf \
+    sf \
     sp \
     spacetime \
     spatstat \
