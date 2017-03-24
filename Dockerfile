@@ -42,7 +42,9 @@ RUN apt-get update \
 ## && echo "deb-src http://deb.debian.org/debian jessie main" >> /etc/apt/sources.list \
 ## Install libgeos \
   && cd /geos* \
-  && ./configure && make && make install \
+  && ./configure \
+  && make \
+  && make install \
 ## Configure options loosely based on homebrew gdal2 https://github.com/OSGeo/homebrew-osgeo4mac/blob/master/Formula/gdal2.rb
   && cd /gdal* \
   && ./configure \
@@ -62,8 +64,8 @@ RUN apt-get update \
   && make \
   && make install \
   && cd .. \
-  ## Cleanup gdal installation
-  && rm -rf gdal-* \
+  ## Cleanup gdal & geos installation
+  && rm -rf gdal-* geos-* \
   && . /etc/environment \
 ## Install R packages labeled "core" in Spatial taskview 
   && install2.r --error \
