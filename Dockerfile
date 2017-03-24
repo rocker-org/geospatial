@@ -2,10 +2,14 @@ FROM rocker/tidyverse:latest
 MAINTAINER "Carl Boettiger" cboettig@ropensci.org
 
 ENV GDAL_VERSION 2.1.3
+ENV GEOS_VERSION 3.5.1
 ENV LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+
 
 RUN wget http://download.osgeo.org/gdal/${GDAL_VERSION}/gdal-${GDAL_VERSION}.tar.gz \
   && tar -xf gdal-${GDAL_VERSION}.tar.gz \
+  && wget http://download.osgeo.org/geos/geos-${GEOS_VERSION}.tar.bz2 \
+  && tar -xf geos-${GEOS_VERSION}.tar.gz \
 ## Install dependencies of gdal-$GDAL_VERSION
 ## && echo "deb-src http://deb.debian.org/debian jessie main" >> /etc/apt/sources.list \
   && apt-get update \
@@ -16,7 +20,7 @@ RUN wget http://download.osgeo.org/gdal/${GDAL_VERSION}/gdal-${GDAL_VERSION}.tar
   libexpat1-dev \
   libfftw3-dev \
   libfreexl-dev \
-  libgeos-dev \
+#  libgeos-dev \ # Need 3.5, this is 3.3
   libgsl0-dev \
   libglu1-mesa-dev \
   libhdf4-alt-dev \
@@ -35,8 +39,11 @@ RUN wget http://download.osgeo.org/gdal/${GDAL_VERSION}/gdal-${GDAL_VERSION}.tar
  ## runtime packages
   netcdf-bin \
   unixodbc-dev \
+## Install libgeos \
+  && cd /geos* \
+  && ./configure && make && make install \
 ## Configure options loosely based on homebrew gdal2 https://github.com/OSGeo/homebrew-osgeo4mac/blob/master/Formula/gdal2.rb
-  && cd gdal* \
+  && cd /gdal* \
   && ./configure \
     --with-curl \
     --with-dods-root=/usr \
