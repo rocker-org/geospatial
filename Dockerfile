@@ -29,7 +29,7 @@ RUN apt-get update \
     libtcl8.5 \
     libtk8.5 \
     libtiff5-dev \
-    libudunits2-dev \ 
+    libudunits2-dev \
     libxerces-c-dev \
    ## runtime packages
     netcdf-bin \
