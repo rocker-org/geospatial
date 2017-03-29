@@ -77,7 +77,7 @@ RUN wget http://download.osgeo.org/gdal/${GDAL_VERSION}/gdal-${GDAL_VERSION}.tar
     rgdal \
     rgeos \
     rlas \
-#    sf \
+    sf \
     sp \
     spacetime \
     spatstat \
