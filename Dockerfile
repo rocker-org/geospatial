@@ -15,7 +15,8 @@ RUN apt-get update \
     libexpat1-dev \
     libfftw3-dev \
     libfreexl-dev \
-#  libgeos-dev \ # Need 3.5, this is 3.3
+	# geos 3.3.0:
+    libgeos-dev \
     libgsl0-dev \
     libglu1-mesa-dev \
     libhdf4-alt-dev \
@@ -36,15 +37,15 @@ RUN apt-get update \
     unixodbc-dev \
   && wget http://download.osgeo.org/gdal/${GDAL_VERSION}/gdal-${GDAL_VERSION}.tar.gz \
   && tar -xf gdal-${GDAL_VERSION}.tar.gz \
-  && wget http://download.osgeo.org/geos/geos-${GEOS_VERSION}.tar.bz2 \
-  && tar -xf geos-${GEOS_VERSION}.tar.bz2 \
+  #&& wget http://download.osgeo.org/geos/geos-${GEOS_VERSION}.tar.bz2 \
+  #&& tar -xf geos-${GEOS_VERSION}.tar.bz2 \
 ## Install dependencies of gdal-$GDAL_VERSION
 ## && echo "deb-src http://deb.debian.org/debian jessie main" >> /etc/apt/sources.list \
 ## Install libgeos \
-  && cd /geos* \
-  && ./configure \
-  && make \
-  && make install \
+  #&& cd /geos* \
+  #&& ./configure \
+  #&& make \
+  #&& make install \
 ## Configure options loosely based on homebrew gdal2 https://github.com/OSGeo/homebrew-osgeo4mac/blob/master/Formula/gdal2.rb
   && cd /gdal* \
   && ./configure \
