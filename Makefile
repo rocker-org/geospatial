@@ -18,5 +18,5 @@ devel/Dockerfile: Dockerfile
 
 update:
 	cp Dockerfile ${R_VERSION}/Dockerfile
-	sed -i 's/tidyverse:latest/tidyverse:${R_VERSION}/' ${R_VERSION}/Dockerfile
+	sed -i 's/verse:latest/verse:${R_VERSION}/' ${R_VERSION}/Dockerfile
 

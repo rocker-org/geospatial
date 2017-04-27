@@ -1,4 +1,4 @@
-FROM rocker/tidyverse:3.4.0
+FROM rocker/verse:latest
 MAINTAINER "Carl Boettiger" cboettig@ropensci.org
 
 ENV GDAL_VERSION 2.1.3
