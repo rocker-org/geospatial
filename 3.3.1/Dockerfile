@@ -75,7 +75,6 @@ RUN apt-get update \
     classInt \
     deldir \
     gstat \
-    lidR \
     maptools \
     ncdf4 \
     proj4 \
@@ -91,4 +90,4 @@ RUN apt-get update \
     splancs \
     geoR \
     ## from bioconductor
-    && R -e "bioclite('rhdf5')"
+    && R -e "BiocInstaller::biocLite('rhdf5')"

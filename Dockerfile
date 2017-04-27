@@ -92,4 +92,4 @@ RUN apt-get update \
     splancs \
     geoR \
     ## from bioconductor
-    && R -e "bioclite('rhdf5')"
+    && R -e "BiocInstaller::biocLite('rhdf5')"
