@@ -1,4 +1,4 @@
-FROM rocker/verse:latest
+FROM rocker/verse:3.3.2
 MAINTAINER "Carl Boettiger" cboettig@ropensci.org
 
 ENV GDAL_VERSION 2.1.3
@@ -75,7 +75,6 @@ RUN apt-get update \
     RandomFields \
     classInt \
     deldir \
-    dggridR \
     gstat \
     lidR \
     maptools \

@@ -1,22 +1,14 @@
-latest: 
-	docker build -t rocker/geospatial .
+all: geo-devel geo-latest geo-3.4.0 geo-3.3.3 geo-3.3.2 geo-3.3.1
 
-sync: 
-	make 3.*.*/Dockerfile
-
-
-devel/Dockerfile: Dockerfile
-	export R_VERSION=devel && make update
-3.4.0/Dockerfile: Dockerfile
-	export R_VERSION=3.4.0 && make update
-3.3.3/Dockerfile: Dockerfile
-	export R_VERSION=3.3.3 && make update
-3.3.2/Dockerfile: Dockerfile
-	export R_VERSION=3.3.2 && make update
-3.3.1/Dockerfile: Dockerfile
-	export R_VERSION=3.3.1 && make update
-
-update:
-	cp Dockerfile ${R_VERSION}/Dockerfile
-	sed -i 's/verse:latest/verse:${R_VERSION}/' ${R_VERSION}/Dockerfile
-
+geo-3.4.0: 
+	docker build -t geospatial:3.4.0 3.4.0
+geo-3.3.3: 
+	docker build -t geospatial:3.3.3 3.3.3
+geo-3.3.2: 
+	docker build -t geospatial:3.3.2 3.3.2
+geo-3.3.1: 
+	docker build -t geospatial:3.3.1 3.3.1
+geo-latest: 
+	docker build -t geospatial .
+geo-devel: 
+	docker build -t geospatial:devel devel 
