@@ -69,8 +69,6 @@ RUN apt-get update \
   && . /etc/environment \
 ## Install R packages labeled "core" in Spatial taskview 
   && install2.r --error \
-    --repos 'https://cloud.r-project.org/' \
-    --repos 'http://www.bioconductor.org/packages/release/bioc' \
     ## from CRAN
     DCluster \
     RColorBrewer \
@@ -95,4 +93,4 @@ RUN apt-get update \
     splancs \
     geoR \
     ## from bioconductor
-    rhdf5 
+    && R -e "bioclite('rhdf5')
