@@ -66,7 +66,6 @@ RUN apt-get update \
   && cd .. \
   ## Cleanup gdal & geos installation
   && rm -rf gdal-* geos-* \
-  && . /etc/environment \
 ## Install R packages labeled "core" in Spatial taskview 
   && install2.r --error \
     ## from CRAN
@@ -92,4 +91,4 @@ RUN apt-get update \
     splancs \
     geoR \
     ## from bioconductor
-    && R -e "bioclite('rhdf5')
+    && R -e "bioclite('rhdf5')"
