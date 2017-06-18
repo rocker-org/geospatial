@@ -1,4 +1,4 @@
-FROM rocker/tidyverse:devel
+FROM rocker/verse:devel
 MAINTAINER "Carl Boettiger" cboettig@ropensci.org
 
 ENV GDAL_VERSION 2.1.3
@@ -26,8 +26,8 @@ RUN apt-get update \
     libproj-dev \
     libsqlite3-dev \
     libssl-dev \
-    libtcl8.5 \
-    libtk8.5 \
+    libtcl8.6 \
+    libtk8.6 \
     libtiff5-dev \
     libudunits2-dev \
     libxerces-c-dev \
@@ -92,4 +92,4 @@ RUN apt-get update \
     splancs \
     geoR \
     ## from bioconductor
-  && R -e "BiocInstaller::biocLite('rhdf5')"
+    && R -e "BiocInstaller::biocLite('rhdf5')"

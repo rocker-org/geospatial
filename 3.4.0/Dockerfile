@@ -26,8 +26,8 @@ RUN apt-get update \
     libproj-dev \
     libsqlite3-dev \
     libssl-dev \
-    libtcl8.5 \
-    libtk8.5 \
+    libtcl8.6 \
+    libtk8.6 \
     libtiff5-dev \
     libudunits2-dev \
     libxerces-c-dev \
