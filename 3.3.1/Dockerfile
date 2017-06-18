@@ -81,7 +81,6 @@ RUN apt-get update \
     raster \
     rgdal \
     rgeos \
-    rlas \
     sf \
     sp \
     spacetime \
