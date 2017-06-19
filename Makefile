@@ -9,17 +9,17 @@ devel/Dockerfile: Dockerfile
 	export R_VERSION=3.4.0 && make update
 
 3.4.0: .PHONY
-	docker build -t geospatial:3.4.0 3.4.0
+	docker build -t rocker/geospatial:3.4.0 3.4.0
 3.3.3: .PHONY
-	docker build -t geospatial:3.3.3 3.3.3
+	docker build -t rocker/geospatial:3.3.3 3.3.3
 3.3.2: .PHONY
-	docker build -t geospatial:3.3.2 3.3.2
+	docker build -t rocker/geospatial:3.3.2 3.3.2
 3.3.1: .PHONY 
-	docker build -t geospatial:3.3.1 3.3.1
+	docker build -t rocker/geospatial:3.3.1 3.3.1
 latest: 
-	docker build -t geospatial .
+	docker build -t rocker/geospatial .
 devel: .PHONY 
-	docker build -t geospatial:devel devel 
+	docker build -t rocker/geospatial:devel devel 
 
 
 update:
