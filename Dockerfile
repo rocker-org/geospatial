@@ -9,6 +9,7 @@ RUN apt-get update \
     libgeos-dev \
     libgsl0-dev \
     libgl1-mesa-dev \
+    libglu1-mesa-dev \
     libhdf4-alt-dev \
     libhdf5-dev \
     liblwgeom-dev \
