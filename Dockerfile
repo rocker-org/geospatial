@@ -1,7 +1,8 @@
 FROM rocker/verse:latest
 MAINTAINER "Carl Boettiger" cboettig@ropensci.org
 
-RUN apt-get update \
+RUN add-apt-repository -y ppa:opencpu/jq && \
+    apt-get update \
   && apt-get install -y --no-install-recommends \
     lbzip2 \
     libfftw3-dev \
@@ -15,9 +16,12 @@ RUN apt-get update \
     liblwgeom-dev \
     libproj-dev \
     libnetcdf-dev \
+    libprotobuf-dev \
     libsqlite3-dev \
     libssl-dev \
     libudunits2-dev \
+    libv8-3.14-dev \
+    protobuf-compiler \
     tk-dev \
     unixodbc-dev \
   && install2.r --error \
@@ -40,6 +44,7 @@ RUN apt-get update \
     spacetime \
     spatstat \
     spdep \
+    tmap \
     geoR \
     geosphere \
     ## from bioconductor
