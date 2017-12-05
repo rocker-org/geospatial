@@ -35,6 +35,7 @@ sp            | Pebesma   | Original & widely used spatial object class
 spacetime     | Pebesma   | Classes and Methods for Spatio-Temporal Data
 spatstat      | Baddeley  | Large spatial statistics package: Spatial Point Pattern Analysis, Model-Fitting, Simulation, Tests
 spdep         | Bivand    | Spatial Dependence: Weighting Schemes, Statistics and Models
+tmap          | Tennekes  | Package for creating static and interactive thematic maps
 geoR          | Ribeiro   | Geostatistical analysis including traditional, likelihood-based and Bayesian methods.
 geosphere     | Hijmans   | Spherical trigonometry for geographic applications. That is, compute distances and related measures for angular (longitude/latitude) locations. 
 
