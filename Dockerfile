@@ -12,12 +12,15 @@ RUN apt-get update \
     libglu1-mesa-dev \
     libhdf4-alt-dev \
     libhdf5-dev \
+    libjq-dev \
     liblwgeom-dev \
     libproj-dev \
+    libprotobuf-dev \
     libnetcdf-dev \
     libsqlite3-dev \
     libssl-dev \
     libudunits2-dev \
+    protobuf-compiler \
     tk-dev \
     unixodbc-dev \
   && install2.r --error \
@@ -40,6 +43,7 @@ RUN apt-get update \
     spacetime \
     spatstat \
     spdep \
+    tmap \
     geoR \
     geosphere \
     ## from bioconductor
