@@ -18,18 +18,22 @@ RUN apt-get update \
     libsqlite3-dev \
     libssl-dev \
     libudunits2-dev \
+    netcdf-bin \
     tk-dev \
     unixodbc-dev \
   && install2.r --error \
     RColorBrewer \
     RandomFields \
+    RNetCDF \
     classInt \
     deldir \
     gstat \
+    hdf5r \
     lidR \
     mapdata \
     maptools \
     mapview \
+    ncdf4 \
     proj4 \
     raster \
     rgdal \

@@ -19,13 +19,16 @@ Package       | Maintainer| Description
 --------------|-----------|----------------------------------
 RColorBrewer  |           | Colors for maps and other plots
 RandomFields  |Schlather  | Methods for the inference on and the simulation of Gaussian fields, and simulation of extreme value random fields.
+RNetCDF       | Woods     | Bindings to C API NetCDF library, with udunits 
 classInt      | Bivand    | Selected commonly used methods for choosing univariate class intervals for mapping or other graphics purposes.
 deldir        | Turner    | Delaunay Triangulation and Dirichlet (Voronoi) Tessellation 
 gstat         | Pebesma   | Spatial and Spatio-Temporal Geostatistical Modelling, Prediction and Simulation
+hdf5r         | Hoefling  | Modern bindings to HF5 C API (replaces hf package)
 lidR          | Roussel   | Airborne LiDAR (Light Detection and Ranging) interface for data manipulation and visualization. Read/write 'las' and 'laz' file
 mapdata       | Deckmyn   | Extra map data for the `maps` package (originally from S)
 maptools      | Bivand    | Set of tools for manipulating and reading geographic data, in particular ESRI Shapefiles.  (See `rgdal` and `sf` for more comprehensive I/O)
-mapview       | Appelhans | sf-compatible interactive map viewer, extends leaflet  
+mapview       | Appelhans | sf-compatible interactive map viewer, extends leaflet
+ncdf4         | Pierce    | `raster`-package compatible netcdf bindings
 proj4         | Urbanek   | A simple interface to lat/long projection and datum transformation.  See `sf` implementation as well. 
 raster        | Hijmans   | Reading, writing, manipulating, analyzing and modeling of gridded spatial data.
 rgdal         | Bivand    | Interface to GDAL, I/O formats. See `sf` for more recent implementation
@@ -35,6 +38,7 @@ sp            | Pebesma   | Original & widely used spatial object class
 spacetime     | Pebesma   | Classes and Methods for Spatio-Temporal Data
 spatstat      | Baddeley  | Large spatial statistics package: Spatial Point Pattern Analysis, Model-Fitting, Simulation, Tests
 spdep         | Bivand    | Spatial Dependence: Weighting Schemes, Statistics and Models
+tmap          | Tennekes  | Thematic, layer-based maps (sf and sp compatible)
 geoR          | Ribeiro   | Geostatistical analysis including traditional, likelihood-based and Bayesian methods.
 geosphere     | Hijmans   | Spherical trigonometry for geographic applications. That is, compute distances and related measures for angular (longitude/latitude) locations. 
 
