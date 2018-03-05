@@ -31,7 +31,6 @@ RUN apt-get update \
     classInt \
     deldir \
     gstat \
-    hdf5r \
     lidR \
     mapdata \
     maptools \
