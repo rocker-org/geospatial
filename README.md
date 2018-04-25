@@ -11,7 +11,7 @@ This image extends the [`rocker-versioned` stack](https://github.com/rocker-org/
 ## Packages
 
 
-The packages included in this image are not meant to provide a kitchen-sink of all geo-spatially related R packages, see the [Spatial Task View](https://cran.r-project.org/web/views/Spatial.html) and [SpatioTemporal Task View](https://cran.r-project.org/web/views/SpatioTemporal.html) on CRAN.  This image seeks to provide a more opinionated collection of packages, prioritizing those packages that can be slow or tricky to install due to compiled code and external dependencies, and with an emphasis on more general-purpose libaries and classes.  
+The packages included in this image are not meant to provide a kitchen-sink of all geo-spatially related R packages, see the [Spatial Task View](https://cran.r-project.org/web/views/Spatial.html) and [SpatioTemporal Task View](https://cran.r-project.org/web/views/SpatioTemporal.html) on CRAN.  This image seeks to provide a more opinionated collection of packages, prioritizing those packages that can be slow or tricky to install due to compiled code and external dependencies, and with an emphasis on more general-purpose libraries and classes.
 
 Please note that many additional geospatial (and other) packages are pulled in as dependencies of this list and thus can also be found on the image.  Feel free to request any additional packages you would like to see added by [filing an issue](https://github.com/rocker-org/geospatial/issues). 
 
