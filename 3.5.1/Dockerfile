@@ -50,4 +50,4 @@ RUN apt-get update \
     geoR \
     geosphere \
     ## from bioconductor
-    && R -e "BiocInstaller::biocLite('rhdf5')"
+    && R -e "BiocManager::install('rhdf5')"
