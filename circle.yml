@@ -6,4 +6,4 @@ machine:
 
 test:
   override:
-    - make latest 
+    - make devel 
