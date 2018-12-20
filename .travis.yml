@@ -3,7 +3,7 @@ services:
 before_install:
   - docker build -t geospatial .
 script:
-  - docker run -ti geospatial R --version | grep -q "3.3.2"
+  - docker run -ti geospatial R --version | grep -q "3.3.3"
   - docker run -ti geospatial R -e 'library(rgdal)'
 
 
