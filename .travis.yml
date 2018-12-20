@@ -3,7 +3,7 @@ services:
 before_install:
   - docker build -t geospatial .
 script:
-  - docker run -ti geospatial R --version | grep -q "3.4.0"
+  - docker run -ti geospatial R --version | grep -q "3.4.1"
   - docker run -ti geospatial R -e 'library(sf)'
 
 
