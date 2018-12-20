@@ -1,4 +1,4 @@
-FROM rocker/verse:3.4.1
+FROM rocker/verse:3.4.2
 MAINTAINER "Carl Boettiger" cboettig@ropensci.org
 
 RUN apt-get update \
@@ -31,6 +31,7 @@ RUN apt-get update \
     classInt \
     deldir \
     gstat \
+    hdf5r \
     lidR \
     mapdata \
     maptools \
