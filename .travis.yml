@@ -1,0 +1,10 @@
+sudo: required
+services:
+  - docker
+before_install:
+  - docker build -t geospatial .
+script:
+  - docker run -ti geospatial R --version | grep -q "3.3.0"
+  - docker run -ti geospatial R -e 'library(rgdal)'
+
+
