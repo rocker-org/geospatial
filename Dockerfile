@@ -1,4 +1,4 @@
-FROM rocker/verse:3.3.1
+FROM rocker/verse:3.3.2
 MAINTAINER "Carl Boettiger" cboettig@ropensci.org
 
 ENV GDAL_VERSION 2.1.3
@@ -75,12 +75,14 @@ RUN apt-get update \
     classInt \
     deldir \
     gstat \
+    lidR \
     maptools \
     ncdf4 \
     proj4 \
     raster \
     rgdal \
     rgeos \
+    rlas \
     sf \
     sp \
     spacetime \
