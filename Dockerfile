@@ -1,4 +1,4 @@
-FROM rocker/verse:3.5.0
+FROM rocker/verse:3.5.1
 MAINTAINER "Carl Boettiger" cboettig@ropensci.org
 
 RUN apt-get update \
@@ -50,4 +50,4 @@ RUN apt-get update \
     geoR \
     geosphere \
     ## from bioconductor
-    && R -e "BiocInstaller::biocLite('rhdf5')"
+    && R -e "BiocManager::install('rhdf5')"
