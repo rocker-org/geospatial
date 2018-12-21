@@ -1,4 +1,4 @@
-FROM rocker/verse:3.4.3
+FROM rocker/verse:3.4.4
 MAINTAINER "Carl Boettiger" cboettig@ropensci.org
 
 RUN apt-get update \
