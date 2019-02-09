@@ -5,8 +5,7 @@ echo "Working dir and contents I see are:"
 echo `pwd`
 echo `ls`
 
-VERSION=3.5.2 # `grep -e "\d\.\d\.\d" -o Dockerfile`
-
+VERSION=`cat Dockerfile | head -n1 | sed 's/.*\([0-9].[0-9].[0-9]\)/\1/'`
 echo "Version being built is:"
 echo $VERSION
 
