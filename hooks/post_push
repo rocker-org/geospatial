@@ -5,6 +5,7 @@ echo "Working dir and contents I see are:"
 echo `pwd`
 echo `ls`
 
+## Not all bash commands are available. notably grep -o -e options fail!!
 VERSION=`cat Dockerfile | head -n1 | sed 's/.*\([0-9].[0-9].[0-9]\)/\1/'`
 echo "Version being built is:"
 echo $VERSION
