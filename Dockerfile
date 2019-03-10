@@ -12,12 +12,14 @@ RUN apt-get update \
     libhdf5-dev \
     libjq-dev \
     liblwgeom-dev \
+	libpq-dev \
     libprotobuf-dev \
     libnetcdf-dev \
     libsqlite3-dev \
     libssl-dev \
     libudunits2-dev \
     netcdf-bin \
+	postgis \
     protobuf-compiler \
     sqlite3 \
     tk-dev \
@@ -43,7 +45,7 @@ RUN wget http://download.osgeo.org/proj/proj-${PROJ_VERSION}.tar.gz \
 RUN cd /usr/local/share/proj \
   && wget http://download.osgeo.org/proj/proj-datumgrid-1.8.zip \
   && unzip -o proj-datumgrid*zip \
-  && rm proj-datumgrid*zip 
+  && rm proj-datumgrid*zip
 
 # GEOS:
 #ENV GEOS_VERSION 3.6.2
