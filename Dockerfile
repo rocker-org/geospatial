@@ -28,7 +28,7 @@ RUN apt-get update \
 # Adapted from https://github.com/r-spatial/sf/blob/master/inst/docker/gdal/Dockerfile
 
 # PROJ:
-ENV PROJ_VERSION=6.0.0
+ENV PROJ_VERSION=5.0.0
 ENV LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 
 RUN wget http://download.osgeo.org/proj/proj-${PROJ_VERSION}.tar.gz \
