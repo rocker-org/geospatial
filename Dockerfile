@@ -5,6 +5,7 @@ RUN apt-get update \
   && apt-get install -y --no-install-recommends \
     lbzip2 \
     libfftw3-dev \
+	libgeos-dev \
     libgsl0-dev \
     libgl1-mesa-dev \
     libglu1-mesa-dev \
@@ -49,18 +50,18 @@ RUN cd /usr/local/share/proj \
 
 # GEOS:
 #ENV GEOS_VERSION 3.6.2
-ENV GEOS_VERSION 3.7.0
+#ENV GEOS_VERSION 3.7.0
 #
-RUN wget http://download.osgeo.org/geos/geos-${GEOS_VERSION}.tar.bz2 \
-  && bzip2 -d geos-*bz2 \
-  && tar xf geos*tar \
-  && cd geos* \
-  && ./configure \
-  && make \
-  && make install \
-  && cd .. \
-  && ldconfig \
-  && rm -rf geo*
+#RUN wget http://download.osgeo.org/geos/geos-${GEOS_VERSION}.tar.bz2 \
+#  && bzip2 -d geos-*bz2 \
+#  && tar xf geos*tar \
+#  && cd geos* \
+#  && ./configure \
+#  && make \
+#  && make install \
+#  && cd .. \
+#  && ldconfig \
+#  && rm -rf geo*
 
 # GDAL:
 ENV GDAL_VERSION 2.4.0
