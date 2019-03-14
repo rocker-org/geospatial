@@ -5,7 +5,7 @@ RUN apt-get update \
   && apt-get install -y --no-install-recommends \
     lbzip2 \
     libfftw3-dev \
-	libgeos-dev \
+    libgeos-dev \
     libgsl0-dev \
     libgl1-mesa-dev \
     libglu1-mesa-dev \
@@ -13,14 +13,14 @@ RUN apt-get update \
     libhdf5-dev \
     libjq-dev \
     liblwgeom-dev \
-	libpq-dev \
+    libpq-dev \
     libprotobuf-dev \
     libnetcdf-dev \
     libsqlite3-dev \
     libssl-dev \
     libudunits2-dev \
     netcdf-bin \
-	postgis \
+    postgis \
     protobuf-compiler \
     sqlite3 \
     tk-dev \
@@ -104,3 +104,5 @@ RUN install2.r --error \
     geosphere \
     ## from bioconductor
     && R -e "BiocManager::install('rhdf5')"
+
+
