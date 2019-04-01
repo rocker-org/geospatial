@@ -54,3 +54,14 @@ RUN apt-get update \
     geosphere \
     ## from bioconductor
     && R -e "BiocManager::install('rhdf5')"
+
+# Install h3
+RUN apt-get install -y --no-install-recommends cmake \
+  && git clone https://github.com/crazycapivara/h3-r.git \
+  && cd h3-r \
+  && chmod +x install-h3c.sh \
+  && bash ./install-h3c.sh \
+  && R -q -e 'devtools::install()' \
+  && cd .. \
+  && rm -rf h3-r
+

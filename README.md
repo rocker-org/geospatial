@@ -40,5 +40,5 @@ spdep         | Bivand    | Spatial Dependence: Weighting Schemes, Statistics an
 tmap          | Tennekes  | Thematic, layer-based maps (sf and sp compatible)
 geoR          | Ribeiro   | Geostatistical analysis including traditional, likelihood-based and Bayesian methods.
 geosphere     | Hijmans   | Spherical trigonometry for geographic applications. That is, compute distances and related measures for angular (longitude/latitude) locations. 
+h3            | Kuethe    | R bindings for H3, a hexagonal hierachical spatial indexing system
 
- 
