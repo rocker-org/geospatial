@@ -14,7 +14,7 @@ RUN apt-get update \
     libhdf5-dev \
     libjq-dev \
     liblwgeom-dev \
-	libpq-dev \
+    libpq-dev \
     libproj-dev \
     libprotobuf-dev \
     libnetcdf-dev \
@@ -22,9 +22,9 @@ RUN apt-get update \
     libssl-dev \
     libudunits2-dev \
     netcdf-bin \
-	postgis \
+    postgis \
     protobuf-compiler \
-	sqlite3 \
+    sqlite3 \
     tk-dev \
     unixodbc-dev \
   && install2.r --error \
