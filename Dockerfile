@@ -49,6 +49,7 @@ RUN apt-get update \
     sp \
     spacetime \
     spatstat \
+    spatialreg \
     spdep \
     geoR \
     geosphere \
