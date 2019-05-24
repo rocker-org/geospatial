@@ -36,7 +36,7 @@ sf            | Pebesma   | Simple-features oriented replacement for sp, rgdal, 
 sp            | Pebesma   | Original & widely used spatial object class
 spacetime     | Pebesma   | Classes and Methods for Spatio-Temporal Data
 spatstat      | Baddeley  | Large spatial statistics package: Spatial Point Pattern Analysis, Model-Fitting, Simulation, Tests
-spatialreg    | Bivand    | Spatial Regression Analysis: Spatatial AutoRegressive Modles (formerly in spdep)
+spatialreg    | Bivand    | Spatial Regression Analysis: Spatatial Autregressive Models (formerly in spdep)
 spdep         | Bivand    | Spatial Dependence: Weighting Schemes, Statistics and Models
 tmap          | Tennekes  | Thematic, layer-based maps (sf and sp compatible)
 geoR          | Ribeiro   | Geostatistical analysis including traditional, likelihood-based and Bayesian methods.
