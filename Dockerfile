@@ -50,7 +50,7 @@ RUN cd /usr/local/share/proj \
 
 # GEOS:
 #ENV GEOS_VERSION 3.6.2
-#ENV GEOS_VERSION 3.7.0
+ENV GEOS_VERSION 3.7.0
 #
 #RUN wget http://download.osgeo.org/geos/geos-${GEOS_VERSION}.tar.bz2 \
 #  && bzip2 -d geos-*bz2 \
@@ -64,8 +64,8 @@ RUN cd /usr/local/share/proj \
 #  && rm -rf geo*
 
 # GDAL:
-ENV GDAL_VERSION=2.4.0
-ENV GDAL_VERSION_NAME=2.4.0
+ENV GDAL_VERSION=2.5.0
+ENV GDAL_VERSION_NAME=2.5.0
 COPY --from=rocker/gdal /gdal-${GDAL_VERSION} /gdal-${GDAL_VERSION}
 RUN cd gdal-${GDAL_VERSION} \
   && make install \
