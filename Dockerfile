@@ -6,6 +6,7 @@ RUN apt-get update \
     lbzip2 \
     libfftw3-dev \
     libgeos-dev \
+    libgdal-dev \
     libgsl0-dev \
     libgl1-mesa-dev \
     libglu1-mesa-dev \
@@ -14,6 +15,7 @@ RUN apt-get update \
     libjq-dev \
     liblwgeom-dev \
     libpq-dev \
+    libproj-dev \
     libprotobuf-dev \
     libnetcdf-dev \
     libsqlite3-dev \
@@ -29,49 +31,49 @@ RUN apt-get update \
 # Adapted from https://github.com/r-spatial/sf/blob/master/inst/docker/gdal/Dockerfile
 
 # PROJ:
-ENV PROJ_VERSION=5.0.0
-ENV LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+#ENV PROJ_VERSION=5.0.0
+#ENV LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 
-RUN wget http://download.osgeo.org/proj/proj-${PROJ_VERSION}.tar.gz \
-  && tar zxf proj-*tar.gz \
-  && cd proj-${PROJ_VERSION} \
-  && ./configure \
-  && make \
-  && make install \
-  && cd .. \
-  && ldconfig \
-  && rm -rf proj*
-
-# install proj-datumgrid:
-RUN cd /usr/local/share/proj \
-  && wget http://download.osgeo.org/proj/proj-datumgrid-1.8.zip \
-  && unzip -o proj-datumgrid*zip \
-  && rm proj-datumgrid*zip
-
-# GEOS:
-#ENV GEOS_VERSION 3.6.2
-ENV GEOS_VERSION 3.7.0
-#
-#RUN wget http://download.osgeo.org/geos/geos-${GEOS_VERSION}.tar.bz2 \
-#  && bzip2 -d geos-*bz2 \
-#  && tar xf geos*tar \
-#  && cd geos* \
+#RUN wget http://download.osgeo.org/proj/proj-${PROJ_VERSION}.tar.gz \
+#  && tar zxf proj-*tar.gz \
+#  && cd proj-${PROJ_VERSION} \
 #  && ./configure \
 #  && make \
 #  && make install \
 #  && cd .. \
 #  && ldconfig \
-#  && rm -rf geo*
-
-# GDAL:
-ENV GDAL_VERSION=2.5.0
-ENV GDAL_VERSION_NAME=2.5.0
-COPY --from=rocker/gdal /gdal-${GDAL_VERSION} /gdal-${GDAL_VERSION}
-RUN cd gdal-${GDAL_VERSION} \
-  && make install \
-  && cd .. \
-  && ldconfig \
-  && rm -rf gdal*
+#  && rm -rf proj*
+#
+## install proj-datumgrid:
+#RUN cd /usr/local/share/proj \
+#  && wget http://download.osgeo.org/proj/proj-datumgrid-1.8.zip \
+#  && unzip -o proj-datumgrid*zip \
+#  && rm proj-datumgrid*zip
+#
+## GEOS:
+##ENV GEOS_VERSION 3.6.2
+#ENV GEOS_VERSION 3.7.0
+##
+##RUN wget http://download.osgeo.org/geos/geos-${GEOS_VERSION}.tar.bz2 \
+##  && bzip2 -d geos-*bz2 \
+##  && tar xf geos*tar \
+##  && cd geos* \
+##  && ./configure \
+##  && make \
+##  && make install \
+##  && cd .. \
+##  && ldconfig \
+##  && rm -rf geo*
+#
+## GDAL:
+#ENV GDAL_VERSION=2.5.0
+#ENV GDAL_VERSION_NAME=2.5.0
+#COPY --from=rocker/gdal /gdal-${GDAL_VERSION} /gdal-${GDAL_VERSION}
+#RUN cd gdal-${GDAL_VERSION} \
+#  && make install \
+#  && cd .. \
+#  && ldconfig \
+#  && rm -rf gdal*
 
 
 RUN install2.r --error \
