@@ -102,6 +102,6 @@ RUN install2.r --error \
     geoR \
     geosphere \
     ## from bioconductor
-    && R -e "BiocManager::install('rhdf5')"
+    && R -e "BiocManager::install('rhdf5', update=FALSE, ask=FALSE)"
 
 
