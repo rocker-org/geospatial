@@ -52,7 +52,7 @@ RUN apt-get update \
     spatstat \
     spatialreg \
     spdep \
-	tmap \
+    tmap \
     geoR \
     geosphere \
     ## from bioconductor
