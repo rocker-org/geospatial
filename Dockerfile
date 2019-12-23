@@ -1,4 +1,4 @@
-FROM rocker/verse:3.6.1
+FROM rocker/verse:3.6.2
 MAINTAINER "Carl Boettiger" cboettig@ropensci.org
 
 RUN apt-get update \
@@ -26,8 +26,9 @@ RUN apt-get update \
     protobuf-compiler \
     sqlite3 \
     tk-dev \
-    unixodbc-dev \
-  && install2.r --error \
+    unixodbc-dev
+
+RUN install2.r --error \
     RColorBrewer \
     RandomFields \
     RNetCDF \
@@ -36,7 +37,6 @@ RUN apt-get update \
     gstat \
     hdf5r \
     lidR \
-    lwgeom \
     mapdata \
     maptools \
     mapview \
@@ -50,10 +50,9 @@ RUN apt-get update \
     sp \
     spacetime \
     spatstat \
-    spatialreg \
     spdep \
-    tmap \
     geoR \
     geosphere \
     ## from bioconductor
-    && R -e "BiocManager::install('rhdf5')"
+    && R -e "BiocManager::install('rhdf5', update=FALSE, ask=FALSE)"
+
