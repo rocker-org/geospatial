@@ -5,7 +5,9 @@
 
 Docker-based Geospatial toolkit for R, built on versioned Rocker images. 
 
-This image extends the [`rocker-versioned` stack](https://github.com/rocker-org/rocker-versioned) with geospatial-related tools, particularly those that can be difficult or slow to add on-the-fly.  As such, this image includes RStudio, the tidyverse packages, and `verse` libraries (notably LaTeX and JAVA environments).  Like the rest of the `rocker-versioned` stack, tags for specific recent versions, including the `latest` and `devel` tags, are also provided. Versions older than the most recent will install R packages from an MRAN snapshot, and may not provide all the same packages as seen on the most recent versions.    
+This image extends the [`rocker-versioned` stack](https://github.com/rocker-org/rocker-versioned) with geospatial-related tools, particularly those that can be difficult or slow to add on-the-fly.  As such, this image includes RStudio, the tidyverse packages, and `verse` libraries (notably LaTeX and JAVA environments).  Like the rest of the `rocker-versioned` stack, tags for specific recent versions, including the `latest` and `devel` tags, are also provided. Versions older than the most recent will install R packages from an MRAN snapshot, and may not provide all the same packages as seen on the most recent versions.   
+
+***For documentation for R >= 4.0.0, for images `r-ver`, `rstudio`, `tidyverse`, `verse`, `geospatial`, `shiny`, and `binder`, please see the [`rocker-versioned2` repository`](https://github.com/rocker-org/rocker-versioned2).*** 
 
 ## Packages
 
