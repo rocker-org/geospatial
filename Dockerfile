@@ -97,6 +97,7 @@ RUN install2.r --error \
     sf \
     sp \
     spacetime \
+    spatialreg \ 
     spatstat \
     spdep \
     geoR \
